@@ -1,0 +1,17 @@
+C:\Users\YATA\source\repos\scolaire\scolaire\bin\Debug\scolaire.exe.config
+C:\Users\YATA\source\repos\scolaire\scolaire\bin\Debug\scolaire.exe
+C:\Users\YATA\source\repos\scolaire\scolaire\bin\Debug\scolaire.pdb
+C:\Users\YATA\source\repos\scolaire\scolaire\bin\Debug\scolaire.xml
+C:\Users\YATA\source\repos\scolaire\scolaire\bin\Debug\MySql.Data.dll
+C:\Users\YATA\source\repos\scolaire\scolaire\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\YATA\source\repos\scolaire\scolaire\obj\Debug\scolaire.vbproj.AssemblyReference.cache
+C:\Users\YATA\source\repos\scolaire\scolaire\obj\Debug\scolaire.vbproj.SuggestedBindingRedirects.cache
+C:\Users\YATA\source\repos\scolaire\scolaire\obj\Debug\scolaire.Form1.resources
+C:\Users\YATA\source\repos\scolaire\scolaire\obj\Debug\scolaire.Resources.resources
+C:\Users\YATA\source\repos\scolaire\scolaire\obj\Debug\scolaire.vbproj.GenerateResource.cache
+C:\Users\YATA\source\repos\scolaire\scolaire\obj\Debug\scolaire.vbproj.CoreCompileInputs.cache
+C:\Users\YATA\source\repos\scolaire\scolaire\obj\Debug\scolaire.vbproj.CopyComplete
+C:\Users\YATA\source\repos\scolaire\scolaire\obj\Debug\scolaire.exe
+C:\Users\YATA\source\repos\scolaire\scolaire\obj\Debug\scolaire.xml
+C:\Users\YATA\source\repos\scolaire\scolaire\obj\Debug\scolaire.pdb
+C:\Users\YATA\source\repos\scolaire\scolaire\obj\Debug\scolaire.FormlaireInscription.resources
