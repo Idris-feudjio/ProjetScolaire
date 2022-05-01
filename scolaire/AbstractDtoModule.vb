@@ -2,12 +2,18 @@
 
 
 Module AbstractDtoModule
+
     'Public connection As New MySqlConnection()
-    Dim connection As New MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=handle_student")
+    Public cmd As New MySqlCommand
+    Public myslDataReader As MySqlDataReader
+    Public connection As New MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=handle_student")
     Public Sub connecttodb()
         Try
-            connection.Open()
-            MessageBox.Show("connect successfull")
+            If connection.State = ConnectionState.Closed Then
+                connection.Open()
+            End If
+
+            'MessageBox.Show("connect successfull")
         Catch ex As Exception
             MessageBox.Show("Failed", ex.Message)
         End Try
@@ -15,16 +21,15 @@ Module AbstractDtoModule
     End Sub
 
     Public Sub runsql(ByRef sql As String)
-        Dim cmd As New MySqlCommand
         connecttodb()
         Try
             cmd.Connection = connection
-            cmd.CommandType = cmd.CommandText
+            cmd.CommandType = CommandType.Text
             cmd.CommandText = sql
             cmd.ExecuteNonQuery()
             cmd.Dispose()
             connection.Close()
-            MsgBox("data has been update")
+            'MsgBox("data has been update")
         Catch ex As Exception
             MsgBox("failed when update data!")
         End Try
@@ -32,15 +37,15 @@ Module AbstractDtoModule
 
     Public Sub loaddatatomysql(ByRef datagrid As DataGridView, ByVal selectquery As String)
         connecttodb() 'open connection db
-        Dim mysqldataadapter As MySqlDataAdapter
+        Dim mysqldatadapter As MySqlDataAdapter
         Dim dt As DataTable
+        mysqldatadapter = New MySqlDataAdapter(selectquery, connection)
 
-        mysqldataadapter = New MySqlDataAdapter(selectquery, connection)
         dt = New DataTable
-        mysqldataadapter.Fill(dt)
+        mysqldatadapter.Fill(dt)
         datagrid.DataSource = dt
         connection.Close()
-        mysqldataadapter.Dispose()
+        mysqldatadapter.Dispose()
 
     End Sub
 
@@ -71,7 +76,7 @@ Module AbstractDtoModule
             Exit Sub
         End If
         runsql(insertquery)
-        loaddatatomysql(datagrid, selectquery)
+        ' loaddatatomysql(datagrid, selectquery)
 
         ' a revoir cette fonctionnalite
         'with form
